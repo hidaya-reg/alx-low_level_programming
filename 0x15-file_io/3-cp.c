@@ -30,14 +30,16 @@ int main(int ac, char *av[])
 		len_src = read(file_from, buf, BUFSIZE);
 		if (len_src < 0)
 			dprintf(STDERR_FILENO, "Error: can't read from file %s\n", av[1]), exit(98);
-		
-		len_dest = write(file_to, buf, len_src);
-		if (len_src != len_dest || len_dest < 0)
-			dprintf(STDERR_FILENO, "Error: can't write to %s\n", av[2]), exit(99);
+		if (len_src > 0)
+		{
+			len_dest = write(file_to, buf, len_src);
+			if (len_src != len_dest || len_dest < 0)
+				dprintf(STDERR_FILENO, "Error: can't write to %s\n", av[2]), exit(99);
+		}
 	}
 	if (close(file_from) < 0)
 		dprintf(STDERR_FILENO, "Error: can't close fd %d\n", file_from), exit(100);
 	if (close(file_to) < 0)
-                dprintf(STDERR_FILENO, "Error: can't close fd %d\n", file_to), exit(100);
+		dprintf(STDERR_FILENO, "Error: can't close fd %d\n", file_to), exit(100);
 	return (0);
 }
