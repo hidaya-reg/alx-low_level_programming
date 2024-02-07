@@ -36,6 +36,7 @@ int advanced_binary(int *array, size_t size, int value)
 	else if (array[index] < value)
 	{
 		int sub_index = advanced_binary(array + index + 1, size - index - 1, value);
+
 		if (sub_index == -1)
 			return (-1);
 		return (index + sub_index + 1);
