@@ -1,14 +1,15 @@
 #include <stdio.h>
 /**
  * main - sum even fibonacci numbers
+ * Return: 0
  */
 
 int main(void)
 {
-	long unsigned int hold1 = 1;
-	long unsigned int hold2 = 2;
-	long unsigned int current;
-	long unsigned int sum = 2;
+	unsigned long int hold1 = 1;
+	unsigned long int hold2 = 2;
+	unsigned long int current;
+	unsigned long int sum = 2;
 
 	while (sum < 4000000)
 	{
