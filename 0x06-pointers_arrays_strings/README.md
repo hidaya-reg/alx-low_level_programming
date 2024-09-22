@@ -158,10 +158,10 @@ First, solve the problem. Then, write the code
 0x2a 0x2a 0x2a 0x2a 0x2a 0x2a 0x2a 0x00
 ```
 ### 3. strcmp
-Write a function that compares two strings.
+Write a function that compares two strings.(Your function should work exactly like `strcmp`)
 
 **Prototype:** `int _strcmp(char *s1, char *s2);`
-Your function should work exactly like `strcmp`
+
 ```bash
 $ cat 3-main.c
 #include "main.h"

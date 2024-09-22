@@ -17,13 +17,15 @@ int main(void)
         s1[i] = '*';
     }
     s1[i] = '\0';
-    printf("%s\n", s1);
+    printf("first : %s\n", s1);
+    printf("*****after copy 5 char function *****\n");
     ptr = _strncpy(s1, "First, solve the problem. Then, write the code\n", 5);
-    printf("%s\n", s1);
-    printf("%s\n", ptr);
+    printf("first  : %s\n", s1);
+    printf("result : %s\n", ptr);
+    printf("*****after copy 90 char function *****\n");
     ptr = _strncpy(s1, "First, solve the problem. Then, write the code\n", 90);
-    printf("%s", s1);
-    printf("%s", ptr);
+    printf("first  : %s", s1);
+    printf("result : %s", ptr);
     for (i = 0; i < 98; i++)
     {
         if (i % 10)
