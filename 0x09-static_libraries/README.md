@@ -53,6 +53,31 @@ nm
 |             |                                                      | `-p`                       | Display symbols in a plain format (no additional info).      | `nm -p libutil.a`                      |
 | **Linking** | Links against libraries.                             | `-l`                       | Specify a library to link against (omit `lib` prefix and `.a`). | `gcc main.o -L. -lutil -o prog`       |
 
+</details>
+
+<details>
+<summary>Steps to Compile and Run a Program with a Static Library</summary>
+
+1. **Create the Static Library**: If you haven't created your static library yet, do so using the following command:
+   ```bash
+   ar rcs libmylib.a mylib1.o mylib2.o
+   ```
+2. **Compile Your Source Code** Write your main program (e.g., `main.c`) that utilizes functions from the static library. Compile it by specifying the library's location and name:
+
+    ```bash
+    gcc main.c -L. -lmylib -o myprogram
+    ```
+Here’s what each flag means:
+
+- `-L.`: Instructs the compiler to search for libraries in the current directory.
+- `-lmylib`: Links to `libmylib.a` (omit the `lib` prefix and `.a` suffix). The `-l` flag indicates that you are linking against a library.
+- `-o myprogram`: Defines the name of the output executable.
+
+3. **Run the Program** Once compilation is successful, execute your program using:
+
+    ```bash
+    ./myprogram
+    ```
 
 </details>
 
