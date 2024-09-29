@@ -26,11 +26,10 @@ int length(char *str)
 char **strtow(char *str)
 {
 	char **array;
-	int i, j, k, lw, w = 0;
+	int i = 0, j, k, lw, w = 0;
 
 	if (str == NULL || length(str) == 0)
 		return (NULL);
-	i = 0;
     while (str[i])
 	{
 		if (str[i] != ' ')
