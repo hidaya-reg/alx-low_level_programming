@@ -163,7 +163,7 @@ You will need several functions to manipulate the linked list:
 A function to create and initialize a new node.
 ```c
 struct Node* createNode(int data) {
-    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node)); // Allocate memory for a new node
+    struct Node* newNode = malloc(sizeof(struct Node)); // Allocate memory for a new node
     newNode->data = data; // Set the data
     newNode->next = NULL; // Initialize the next pointer to NULL
     return newNode;       // Return the new node
